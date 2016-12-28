@@ -131,5 +131,20 @@ public class TestDefaultController
     controller.addHandler(request, handler);
   }
 
+  @Test(timeout=1600)
+  @Ignore(value="Ignore until we figure out a decent time-limit")
+  public void testProcessMultipleRequestsTimeout()
+  {
+    Request request;
+    Response response = new SampleResponse();
+    RequestHandler handler = new SampleHandler();
 
+    for (int i = 0; i < 999999; i++) {
+      request = new SampleRequest(String.valueOf(i));
+      controller.addHandler(request, handler);
+      response = controller.processRequest(request);
+      assertNotNull(response);
+      assertNotSame(ErrorResponse.class, response.getClass());
+    }
+  }
 } //TestDefaultController
