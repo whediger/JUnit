@@ -112,4 +112,24 @@ public class TestDefaultController
     assertEquals(ErrorResponse.class, response.getClass());
   }
 
+  @Test (expected=RuntimeException.class)
+  public void testGetHandlerNotDefined()
+  {
+    SampleRequest request = new SampleRequest("testNotDefined");
+
+    //this is supposed to throw a runtime exception
+    controller.addHandler(request);
+  }
+
+  @Test (expected=RuntimeException.class)
+  public void testAddRequestDuplicateName()
+  {
+    SampleRequest requesst = new SampleRequest();
+    SampleHandler handler = new SampleHandler();
+
+    //this is supposed to throw a RuntimeException
+    controller.addHandler(request, handler);
+  }
+
+
 } //TestDefaultController
