@@ -10,7 +10,7 @@ public class TestDefaultController
   private RequestHandler handler;
 
   @Before
-  public void instantiate() throws Exception
+  public void init() throws Exception
   {
     controller = new DefaultController();
     request = new SampleRequest();
@@ -26,8 +26,25 @@ public class TestDefaultController
 
   private class SampleRequest implements Request
   {
-    public String getName(){
-      return "Test";
+    private static final String NAME = "Test";
+    public String getName()
+    {
+      return NAME;
+    }
+
+    public boolean equals(Object object)
+    {
+      boolean result = false;
+      if (object instanceof SampleResponse)
+      {
+        result = ((SampleResponse) object).getName().equals(getName());
+      }
+      return result;
+    }
+
+    public int hashCode()
+    {
+      return NAME.hashCode();
     }
   }
 
@@ -55,8 +72,7 @@ public class TestDefaultController
   {
     Response response = controller.processRequest(request);
     assertNotNull("Must not return a null response", response);
-    assertEquals("Response should be of type SampleResponse",
-                      SampleResponse.class, response.getClass());
+    assertEquals(new SampleResponse(), response);
   }
-
+  
 } //TestDefaultController
