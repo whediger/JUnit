@@ -6,6 +6,8 @@ public class DefaultController implements Controller {
 
   private Map requestHandlers = new HashMap();
 
+  
+
   protected RequestHandler getHandler(Request request){
 
     if(!this.requestHandlers.containsKey(request.getName()))
@@ -18,6 +20,8 @@ public class DefaultController implements Controller {
     return (RequestHandler) this.requestHandlers.get(request.getName());
   }
 
+
+
   public Response processRequest(Request request)
   {
     Response response;
@@ -28,6 +32,8 @@ public class DefaultController implements Controller {
     }
     return response;
   }
+
+
 
   public void addHandler(Request request, RequestHandler requestHandler)
   {

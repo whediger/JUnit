@@ -118,13 +118,13 @@ public class TestDefaultController
     SampleRequest request = new SampleRequest("testNotDefined");
 
     //this is supposed to throw a runtime exception
-    controller.addHandler(request);
+    controller.getHandler(request);
   }
 
   @Test (expected=RuntimeException.class)
   public void testAddRequestDuplicateName()
   {
-    SampleRequest requesst = new SampleRequest();
+    SampleRequest request = new SampleRequest();
     SampleHandler handler = new SampleHandler();
 
     //this is supposed to throw a RuntimeException
