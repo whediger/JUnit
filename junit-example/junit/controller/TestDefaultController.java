@@ -74,5 +74,13 @@ public class TestDefaultController
     assertNotNull("Must not return a null response", response);
     assertEquals(new SampleResponse(), response);
   }
-  
+
+  private class SampleExceptionHandler implements RequestHandler
+  {
+    public Response process(Request request) throws Exception
+    {
+      throw new Exception("Error: Processing request");
+    }
+  }
+
 } //TestDefaultController
