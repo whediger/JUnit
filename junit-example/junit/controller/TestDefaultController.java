@@ -19,8 +19,36 @@ public class TestDefaultController
     throw new RuntimeException("implement me");
   }
 
-  public static void main(String args[]) {
-      org.junit.runner.JUnitCore.main("TestDefaultController");
+  private class SampleRequest implements Request
+  {
+    public String getName(){
+      return "Test";
     }
+  }
 
-}
+  private class SampleHandler implements RequestHandler
+  {
+    public Response process(Request request) throws Exception {
+      return new SampleResponse();
+    }
+  }
+
+  private class SampleResponse implements Response
+  {
+
+  }
+
+  @Test
+  public void testAddHandler()
+  {
+    Request request = new SampleRequest();
+    RequestHandler handler = new SampleHandler();
+    controller.addHandler(request, handler);
+    RequestHandler handler2 = controller.getHandler(request);
+    assertSame("Handler we set in controller should be the same we get", handler2, handler);
+  }
+  // public static void main(String args[]) {
+  //     org.junit.runner.JUnitCore.main("TestDefaultController");
+  //   }
+
+} //TestDefaultController
