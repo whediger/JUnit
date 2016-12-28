@@ -103,7 +103,7 @@ public class TestDefaultController
   @Test
   public void testProcessRequestAnswersErrorResponse()
   {
-    SampleRequest request = new SampleRequest();
+    SampleRequest request = new SampleRequest("testError");
     SampleExceptionHandler handler = new SampleExceptionHandler();
     controller.addHandler(request, handler);
     Response response = controller.processRequest(request);
