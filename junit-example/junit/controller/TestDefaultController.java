@@ -83,4 +83,16 @@ public class TestDefaultController
     }
   }
 
+  @Test
+  public void testProcessRequestAnswersErrorResponse()
+  {
+    SampleRequest request = new SampleRequest();
+    SampleExceptionHandler handler = new SampleEceptionHandler();
+    controller.addHandler(request, handler);
+    Response response = controller.processRequest(request);
+
+    assertNotNull("Must not return a null response", response);
+    assertEquals(ErrorResponse.class, response.getClass());
+  }
+
 } //TestDefaultController
