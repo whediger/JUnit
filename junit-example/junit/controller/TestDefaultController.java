@@ -26,7 +26,22 @@ public class TestDefaultController
 
   private class SampleRequest implements Request
   {
+    public String getName(){
+      return "Test";
+    }
+  }
+
+  private class SampleHandler implements RequestHandler
+  {
+    public Response process(Request request) throws Exception {
+      return new SampleResponse();
+    }
+  }
+
+  private class SampleResponse implements Response
+  {
     private static final String NAME = "Test";
+    @Override
     public String getName()
     {
       return NAME;
@@ -46,18 +61,6 @@ public class TestDefaultController
     {
       return NAME.hashCode();
     }
-  }
-
-  private class SampleHandler implements RequestHandler
-  {
-    public Response process(Request request) throws Exception {
-      return new SampleResponse();
-    }
-  }
-
-  private class SampleResponse implements Response
-  {
-
   }
 
   @Test
@@ -87,7 +90,7 @@ public class TestDefaultController
   public void testProcessRequestAnswersErrorResponse()
   {
     SampleRequest request = new SampleRequest();
-    SampleExceptionHandler handler = new SampleEceptionHandler();
+    SampleExceptionHandler handler = new SampleExceptionHandler();
     controller.addHandler(request, handler);
     Response response = controller.processRequest(request);
 
