@@ -5,4 +5,8 @@ public class Calculator {
       sum += Integer.valueOf(summand);
     return sum;
   }
+
+  public double add(double a, double b){
+    return a + b;
+  }
 }
