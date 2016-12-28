@@ -26,8 +26,22 @@ public class TestDefaultController
 
   private class SampleRequest implements Request
   {
-    public String getName(){
-      return "Test";
+    private static final String DEFAULT_NAME = "Test";
+    private String name;
+
+    public SampleRequest(String n)
+    {
+      name = n;
+    }
+
+    public SampleRequest()
+    {
+      this(DEFAULT_NAME);
+    }
+
+    public String getName()
+    {
+      return this.name;
     }
   }
 
