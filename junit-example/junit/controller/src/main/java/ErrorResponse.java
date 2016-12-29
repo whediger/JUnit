@@ -1,4 +1,6 @@
 
+package controller;
+
 public class ErrorResponse implements Response{
 
   private Request originalRequest;

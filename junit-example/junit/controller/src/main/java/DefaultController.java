@@ -1,4 +1,6 @@
 
+package controller;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -6,7 +8,7 @@ public class DefaultController implements Controller {
 
   private Map requestHandlers = new HashMap();
 
-  
+
 
   protected RequestHandler getHandler(Request request){
 
