@@ -1,0 +1,7 @@
+
+<ivy-module version="2.4">
+  <info organisation="HEDgear Software" module="using-ivy"/>
+  <dependencies>
+    <dependency org="junit" name="junit" rev="4.9"/>
+  </dependencies>
+</ivy-module>

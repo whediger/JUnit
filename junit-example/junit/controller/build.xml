@@ -1,13 +1,15 @@
 
-<project name="controller" default="compile.test">
-
+<project name="controller" default="test" xmlns:ivy="antlib:org.apache.ivy.ant">
   <property file="build.properties"/>
+  <ivy:retrieve file="./ivy.xml" sync="true"/>
   <property name="src.dir" location="src"/>
   <property name="src.test.java.dir" location="${src.dir}/test/java"/>
   <property name="src.main.java.dir" location="${src.dir}/main/java"/>
   <property name="bin.dir" location="bin"/>
   <property name="bin.test.java.dir" location="${bin.dir}/test/java"/>
   <property name="bin.main.java.dir" location="${bin.dir}/main/java"/>
+  <property name="junit.jar" location="lib/junit-4.9.jar"/>
+
 
   <target name="compile.java">
     <mkdir dir="${bin.main.java}"/>
@@ -22,6 +24,7 @@
       <src path="${src.test.java.dir}"/>
       <classpath>
         <pathelement location="${bin.main.java.dir}"/>
+        <pathelement location="${junit.jar}"/>
       </classpath>
     </javac>
   </target>
@@ -38,6 +41,7 @@
         <classpath>
           <pathelement location="${bin.test.java.dir}"/>
           <pathelement location="${bin.main.java.dir}"/>
+          <pathelement location="${junit.jar}"/>
         </classpath>
     </junit>
   </target>
