@@ -1,4 +1,6 @@
 
+<!-- this will generate a 'lib' folder of dependencies. be sure to .gitignore it -->
+
 <ivy-module version="2.4">
   <info organisation="HEDgear Software" module="using-ivy"/>
   <dependencies>
