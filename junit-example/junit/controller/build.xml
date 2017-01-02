@@ -1,5 +1,5 @@
 
-<project name="controller" default="test" xmlns:ivy="antlib:org.apache.ivy.ant"><!--added xmlns for ivy-->
+<project name="controller" default="report" xmlns:ivy="antlib:org.apache.ivy.ant"><!--added xmlns for ivy-->
   <property file="build.properties"/>
   <ivy:retrieve file="./ivy.xml" sync="true"/><!--added for ivy-->
   <property name="src.dir" location="src"/>
@@ -35,7 +35,7 @@
 
   <target name="test" depends="compile">
     <mkdir dir="${bin.report.dir}"/> <!--added for ivy reports-->
-    <echo message="Hello +==}========>"/>
+    <echo message="Tests        +==}========>"/>
     <junit printsummary="yes" haltonerror="yes" haltonfailure="yes" fork="yes">
       <formatter type="xml"/> <!-- added to create report -->
       <!-- <formatter type="plain" usefile="false"/> --> <!-- commented out to create report -->
