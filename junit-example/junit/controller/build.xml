@@ -38,7 +38,15 @@
     <echo message="Tests        +==}========>"/>
     <junit printsummary="yes" haltonerror="yes" haltonfailure="yes" fork="yes">
       <formatter type="xml"/> <!-- added to create report -->
-      <!-- <formatter type="plain" usefile="false"/> --> <!-- commented out to create report -->
+      <formatter type="plain" usefile="false"/> <!-- commented out to create report file, uncommented for batch reports -->
+      <!-- Batch tesing markup... -->
+      <batchtest todir="${bin.report.dir}">
+        <fileset dir="${src.test.java.dir}">
+          <include name="**/${tests}.java"/>
+          <exclude name="**/Test*All.java"/>
+        </fileset>
+      </batchtest>
+      <!-- ...end of batch testing markup -->
       <test name="controller.TestDefaultController" todir="${bin.report.dir}"/> <!-- added to gennerate report -->
         <classpath>
           <pathelement location="${bin.test.java.dir}"/>
