@@ -1,15 +1,15 @@
 
-<project name="controller" default="test" xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="controller" default="test" xmlns:ivy="antlib:org.apache.ivy.ant"><!--added xmlns for ivy-->
   <property file="build.properties"/>
-  <ivy:retrieve file="./ivy.xml" sync="true"/>
+  <ivy:retrieve file="./ivy.xml" sync="true"/><!--added for ivy-->
   <property name="src.dir" location="src"/>
   <property name="src.test.java.dir" location="${src.dir}/test/java"/>
   <property name="src.main.java.dir" location="${src.dir}/main/java"/>
   <property name="bin.dir" location="bin"/>
   <property name="bin.test.java.dir" location="${bin.dir}/test/java"/>
   <property name="bin.main.java.dir" location="${bin.dir}/main/java"/>
-  <property name="junit.jar" location="lib/junit-4.9.jar"/>
-
+  <property name="junit.jar" location="lib/junit-4.9.jar"/> <!--added for ivy-->
+  <property name="bin.report.dir" location="${bin.dir}/report"/><!--added for ivy reports-->
 
   <target name="compile.java">
     <mkdir dir="${bin.main.java}"/>
@@ -24,7 +24,7 @@
       <src path="${src.test.java.dir}"/>
       <classpath>
         <pathelement location="${bin.main.java.dir}"/>
-        <pathelement location="${junit.jar}"/>
+        <pathelement location="${junit.jar}"/><!--added for ivy-->
       </classpath>
     </javac>
   </target>
@@ -34,16 +34,29 @@
   </target>
 
   <target name="test" depends="compile">
+    <mkdir dir="${bin.report.dir}"/> <!--added for ivy reports-->
     <echo message="Hello +==}========>"/>
     <junit printsummary="yes" haltonerror="yes" haltonfailure="yes" fork="yes">
-      <formatter type="plain" usefile="false"/>
-      <test name="controller.TestDefaultController"/>
+      <formatter type="xml"/> <!-- added to create report -->
+      <!-- <formatter type="plain" usefile="false"/> --> <!-- commented out to create report -->
+      <test name="controller.TestDefaultController" todir="${bin.report.dir}"/> <!-- added to gennerate report -->
         <classpath>
           <pathelement location="${bin.test.java.dir}"/>
           <pathelement location="${bin.main.java.dir}"/>
-          <pathelement location="${junit.jar}"/>
+          <pathelement location="${junit.jar}"/><!--added for ivy-->
         </classpath>
     </junit>
+  </target>
+
+  <!-- following target added to generate report -->
+  <target name="report" depends="test">
+    <mkdir dir="${bin.report.dir}/html"/>
+    <junitreport todir="${bin.report.dir}">
+      <fileset dir="${bin.report.dir}">
+        <include name="TEST-*.xml"/>
+      </fileset>
+      <report todir="${bin.report.dir}/html"/>
+    </junitreport>
   </target>
 
 </project>
