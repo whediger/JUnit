@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Wess-Air.lan" name="controller.TestDefaultController" skipped="1" tests="6" time="0.077" timestamp="2017-01-02T21:26:18">
+<testsuite errors="0" failures="0" hostname="Wess-Air.lan" name="controller.TestDefaultController" skipped="1" tests="6" time="0.089" timestamp="2017-01-02T21:58:44">
   <properties>
     <property name="file.encoding.pkg" value="sun.io" />
     <property name="ivy.retrieve.pattern.ivy.instance" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/lib/[artifact]-[revision](-[classifier]).[ext]" />
@@ -65,7 +65,7 @@
     <property name="ant.project.default-target" value="report" />
     <property name="ivy.targets.copied" value="false" />
     <property name="ivy.parents.count" value="0" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner controller.TestDefaultController skipNonTests=false filtertrace=true haltOnError=true haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/report/TEST-controller.TestDefaultController.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/junitvmwatcher4703435539133823297.properties propsfile=/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/junit8163464536069553228.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner controller.TestDefaultController skipNonTests=false filtertrace=true haltOnError=true haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/report/TEST-controller.TestDefaultController.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/junitvmwatcher3270224299169487780.properties propsfile=/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/junit872133420771006948.properties" />
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="ivy.shared.default.artifact.pattern" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
     <property name="ant.file" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/build.xml" />
@@ -97,7 +97,8 @@
     <property name="user.name.ivy.instance" value="whediger" />
     <property name="ivy.cache.dir" value="/Users/whediger/.ivy2/cache" />
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
-    <property name="junit.jar" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/lib/junit-4.9.jar" />
+    <property name="junit.jar" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/&quot;lib/junit-4.9.jar&quot;" />
+    <property name="junit-home" value="&quot;lib/junit-4.9.jar&quot;" />
     <property name="java.io.tmpdir.ivy.instance" value="/var/folders/5x/trr1kvns3f10d1k54j0t93z40000gn/T/" />
     <property name="ant.version" value="Apache Ant(TM) version 1.10.0 compiled on December 27 2016" />
     <property name="java.home.ivy.instance" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre" />
@@ -161,8 +162,8 @@
     <property name="sun.cpu.isalist" value="" />
     <property name="file.separator.ivy.instance" value="/" />
     <property name="ivy.deps.changed" value="false" />
-    <property name="ivy.local.default.root.ivy.instance" value="/Users/whediger/.ivy2/local" />
     <property name="java.ext.dirs" value="/Users/whediger/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="ivy.local.default.root.ivy.instance" value="/Users/whediger/.ivy2/local" />
     <property name="os.version" value="10.11.4" />
     <property name="user.home" value="/Users/whediger" />
     <property name="sun.java.launcher.ivy.instance" value="SUN_STANDARD" />
@@ -182,8 +183,8 @@
     <property name="ivy.revision" value="working@Wess-Air.lan" />
     <property name="user.timezone.ivy.instance" value="America/Denver" />
     <property name="java.vm.version" value="25.101-b13" />
+    <property name="java.class.path" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/test/java:/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/main/java:/Users/whediger/java/apache-ant-1.10.0/lib/junit-4.9.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-launcher.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-junit.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-junit4.jar" />
     <property name="ivy.default.ivy.user.dir" value="/Users/whediger/.ivy2" />
-    <property name="java.class.path" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/test/java:/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/main/java:/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/lib/junit-4.9.jar:/Users/whediger/java/apache-ant-1.10.0/lib/junit-4.9.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-launcher.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-junit.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-junit4.jar" />
     <property name="user.home.ivy.instance" value="/Users/whediger" />
     <property name="basedir.ivy.instance" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller" />
     <property name="ant.library.dir" value="/Users/whediger/java/apache-ant-1.10.0/lib" />
@@ -223,8 +224,8 @@
   </properties>
   <testcase classname="controller.TestDefaultController" name="testAddHandler" time="0.002" />
   <testcase classname="controller.TestDefaultController" name="testProcessRequest" time="0.001" />
-  <testcase classname="controller.TestDefaultController" name="testProcessRequestAnswersErrorResponse" time="0.001" />
-  <testcase classname="controller.TestDefaultController" name="testGetHandlerNotDefined" time="0.0" />
+  <testcase classname="controller.TestDefaultController" name="testProcessRequestAnswersErrorResponse" time="0.002" />
+  <testcase classname="controller.TestDefaultController" name="testGetHandlerNotDefined" time="0.001" />
   <testcase classname="controller.TestDefaultController" name="testAddRequestDuplicateName" time="0.0" />
   <testcase classname="controller.TestDefaultController" name="testProcessMultipleRequestsTimeout" time="0.0">
     <skipped message="Ignore until we figure out a decent time-limit" />

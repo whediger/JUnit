@@ -10,19 +10,19 @@
   <property name="bin.test.java" location="${bin.dir}/test/java"/>
   <property name="bin.test.java.dir" location="${bin.dir}/test/java"/>
   <property name="bin.main.java.dir" location="${bin.dir}/main/java"/>
-  <property name="junit.jar" location="lib/junit-4.9.jar"/> <!--added for ivy-->
+  <property name="junit.jar" location="${junit-home}"/> <!--added for ivy-->
   <property name="bin.report.dir" location="${bin.dir}/report"/><!--added for ivy reports-->
 
   <target name="compile.java">
     <mkdir dir="${bin.main.java}"/>
-    <javac destdir="${bin.main.java.dir}">
+    <javac destdir="${bin.main.java.dir}" includeantruntime="false">
       <src path="${src.main.java.dir}"/>
     </javac>
   </target>
 
   <target name="compile.test" depends="compile.java">
     <mkdir dir="${bin.test.java}"/>
-    <javac destdir="${bin.test.java.dir}">
+    <javac destdir="${bin.test.java.dir}" includeantruntime="true">
       <src path="${src.test.java.dir}"/>
       <classpath>
         <pathelement location="${bin.main.java.dir}"/>
@@ -82,7 +82,7 @@
   <!-- example of single test execution, cmdln: ant dist -->
   <target name="dist" depends="clean">
     <mkdir dir="${bin.main.java}"/>
-    <javac destdir="${bin.main.java.dir}">
+    <javac destdir="${bin.main.java.dir}" includeantruntime="false">
       <src path="${src.main.java.dir}"/>
     </javac>
   </target>
