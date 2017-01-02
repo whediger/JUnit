@@ -1,4 +1,6 @@
 
+package stubs;
+
 import java.net.URL;
 import java.net.HttpURLConnection;
 import java.io.InputStream;
@@ -8,11 +10,11 @@ public class WebClient
 {
   public String getContent(URL url)
   {
-    Stringbuffer content = new StringBuffer();
+    StringBuffer content = new StringBuffer();
     try {
-      HttpURLConnection connection = (HTTPURLConnection) url.openConnection();
+      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
       connection.setDoInput(true);
-      InputStream is = nonnection.getInputStream();
+      InputStream is = connection.getInputStream();
       byte[] buffer = new byte[2048];
       int count;
       while(-1 != (count = is.read(buffer))) {

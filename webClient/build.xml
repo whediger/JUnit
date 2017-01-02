@@ -1,0 +1,21 @@
+
+<project name="webClient" default="compile.test.java">
+  <property file="build.properties"/>
+  <property name="src.dir" location="src"/>
+  <property name="src.main.java.dir" location="${src.dir}/main/java"/>
+  <property name="src.test.java.dir" location="${src.dir}/test/java"/>
+  <property name="bin.dir" location="bin"/>
+  <property name="bin.main.java.dir" location="${bin.dir}/main/java/"/>
+  <property name="bin.test.java.dir" location="${bin.dir}/test/java/"/>
+
+  <target name="compile.test.java">
+    <mkdir dir="${bin.test.java}"/>
+    <javac destdir="${bin.test.java}">
+      <src path="${src.test.java.dir}"/>
+      <classpath>
+        <pathelement location="Users/whediger/java/jetty-distribution-9.4.0v20161208"/>
+        <pathelement location="${bin.main.java.dir}"/>
+      </classpath>
+    </javac>
+  </target>
+</project>

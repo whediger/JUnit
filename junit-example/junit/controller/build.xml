@@ -1,0 +1,45 @@
+
+<project name="controller" default="compile.test">
+
+  <property file="build.properties"/>
+  <property name="src.dir" location="src"/>
+  <property name="src.test.java.dir" location="${src.dir}/test/java"/>
+  <property name="src.main.java.dir" location="${src.dir}/main/java"/>
+  <property name="bin.dir" location="bin"/>
+  <property name="bin.test.java.dir" location="${bin.dir}/test/java"/>
+  <property name="bin.main.java.dir" location="${bin.dir}/main/java"/>
+
+  <target name="compile.java">
+    <mkdir dir="${bin.main.java}"/>
+    <javac destdir="${bin.main.java.dir}">
+      <src path="${src.main.java.dir}"/>
+    </javac>
+  </target>
+
+  <target name="compile.test" depends="compile.java">
+    <mkdir dir="${bin.test.java}"/>
+    <javac destdir="${bin.test.java.dir}">
+      <src path="${src.test.java.dir}"/>
+      <classpath>
+        <pathelement location="${bin.main.java.dir}"/>
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="compile" depends="compile.java, compile.test">
+    <echo message="Note: Used to execute targets in order"/>
+  </target>
+
+  <target name="test" depends="compile">
+    <echo message="Hello +==}========>"/>
+    <junit printsummary="yes" haltonerror="yes" haltonfailure="yes" fork="yes">
+      <formatter type="plain" usefile="false"/>
+      <test name="controller.TestDefaultController"/>
+        <classpath>
+          <pathelement location="${bin.test.java.dir}"/>
+          <pathelement location="${bin.main.java.dir}"/>
+        </classpath>
+    </junit>
+  </target>
+
+</project>
