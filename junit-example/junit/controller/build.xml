@@ -6,6 +6,8 @@
   <property name="src.test.java.dir" location="${src.dir}/test/java"/>
   <property name="src.main.java.dir" location="${src.dir}/main/java"/>
   <property name="bin.dir" location="bin"/>
+  <property name="bin.main.java" location="${bin.dir}/main/java"/>
+  <property name="bin.test.java" location="${bin.dir}/test/java"/>
   <property name="bin.test.java.dir" location="${bin.dir}/test/java"/>
   <property name="bin.main.java.dir" location="${bin.dir}/main/java"/>
   <property name="junit.jar" location="lib/junit-4.9.jar"/> <!--added for ivy-->
@@ -68,6 +70,21 @@
       </fileset>
       <report todir="${bin.report.dir}/html"/>
     </junitreport>
+  </target>
+
+  <!-- remove build gennerated files to avoid potential side effects -->
+  <target name="clean">
+    <delete dir="${bin.dir}"/>
+    <echo message="Note: File system clean  +===}========>"/>
+  </target>
+
+  <!-- to create distribution files, this target depends on clean -->
+  <!-- example of single test execution, cmdln: ant dist -->
+  <target name="dist" depends="clean">
+    <mkdir dir="${bin.main.java}"/>
+    <javac destdir="${bin.main.java.dir}">
+      <src path="${src.main.java.dir}"/>
+    </javac>
   </target>
 
 </project>

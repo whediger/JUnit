@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Wess-Air.lan" name="controller.TestDefaultController" skipped="1" tests="6" time="0.082" timestamp="2017-01-02T20:35:23">
+<testsuite errors="0" failures="0" hostname="Wess-Air.lan" name="controller.TestDefaultController" skipped="1" tests="6" time="0.077" timestamp="2017-01-02T21:26:18">
   <properties>
     <property name="file.encoding.pkg" value="sun.io" />
     <property name="ivy.retrieve.pattern.ivy.instance" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/lib/[artifact]-[revision](-[classifier]).[ext]" />
@@ -10,6 +10,7 @@
     <property name="ivy.resolve.default.type.filter" value="*" />
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre" />
     <property name="ivy.configurations.ivy.instance" value="*" />
+    <property name="bin.main.java" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/main/java" />
     <property name="ivy.basedir.ivy.instance" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller" />
     <property name="ivy.dep.file.ivy.instance" value="ivy.xml" />
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/endorsed" />
@@ -19,6 +20,7 @@
     <property name="ftp.nonProxyHosts.ivy.instance" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="java.vm.specification.vendor.ivy.instance" value="Oracle Corporation" />
     <property name="sun.os.patch.level" value="unknown" />
+    <property name="test" value="Test*" />
     <property name="ivy.dep.file" value="ivy.xml" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
     <property name="ivy.local.default.artifact.pattern.ivy.instance" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
@@ -63,7 +65,7 @@
     <property name="ant.project.default-target" value="report" />
     <property name="ivy.targets.copied" value="false" />
     <property name="ivy.parents.count" value="0" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner controller.TestDefaultController skipNonTests=false filtertrace=true haltOnError=true haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/report/TEST-controller.TestDefaultController.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/junitvmwatcher4023228990088977266.properties propsfile=/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/junit661325188908835655.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner controller.TestDefaultController skipNonTests=false filtertrace=true haltOnError=true haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/report/TEST-controller.TestDefaultController.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/junitvmwatcher4703435539133823297.properties propsfile=/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/junit8163464536069553228.properties" />
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="ivy.shared.default.artifact.pattern" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
     <property name="ant.file" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/build.xml" />
@@ -141,12 +143,12 @@
     <property name="java.ext.dirs.ivy.instance" value="/Users/whediger/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
     <property name="ivy.log.modules.in.use.ivy.instance" value="false" />
-    <property name="bin.report.dir" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/report" />
     <property name="ivy.settings.dir.url.ivy.instance" value="jar:file:/Users/whediger/java/apache-ant-1.10.0/lib/ivy-2.4.0.jar!/org/apache/ivy/core/settings" />
+    <property name="bin.report.dir" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/report" />
     <property name="sun.os.patch.level.ivy.instance" value="unknown" />
     <property name="file.encoding.pkg.ivy.instance" value="sun.io" />
-    <property name="ivy.resolver.default.check.modified" value="false" />
     <property name="ivy.shared.default.ivy.pattern" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
+    <property name="ivy.resolver.default.check.modified" value="false" />
     <property name="ivy.settings.file.ivy.instance" value="ivysettings.xml" />
     <property name="ivy.nb.targets.copied" value="0" />
     <property name="ant.project.name" value="controller" />
@@ -158,9 +160,9 @@
     <property name="src.test.java.dir" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/src/test/java" />
     <property name="sun.cpu.isalist" value="" />
     <property name="file.separator.ivy.instance" value="/" />
-    <property name="java.ext.dirs" value="/Users/whediger/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
     <property name="ivy.deps.changed" value="false" />
     <property name="ivy.local.default.root.ivy.instance" value="/Users/whediger/.ivy2/local" />
+    <property name="java.ext.dirs" value="/Users/whediger/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
     <property name="os.version" value="10.11.4" />
     <property name="user.home" value="/Users/whediger" />
     <property name="sun.java.launcher.ivy.instance" value="SUN_STANDARD" />
@@ -171,16 +173,17 @@
     <property name="ant.library.dir.ivy.instance" value="/Users/whediger/java/apache-ant-1.10.0/lib" />
     <property name="ivy.local.default.ivy.pattern" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
     <property name="ivy.shared.default.ivy.pattern.ivy.instance" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
-    <property name="java.vm.info.ivy.instance" value="mixed mode" />
     <property name="ivy.publish.src.artifacts.pattern" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="java.vm.info.ivy.instance" value="mixed mode" />
     <property name="sun.java.command.ivy.instance" value="org.apache.tools.ant.launch.Launcher -cp :/Users/whediger/java/JUnit/junit-4.9.jar:/Users/whediger/java/JUnit/hamcrest-core-1.3.jar" />
     <property name="ivy.distrib.dir" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/distrib" />
     <property name="sun.cpu.endian" value="little" />
+    <property name="bin.test.java" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/test/java" />
     <property name="ivy.revision" value="working@Wess-Air.lan" />
     <property name="user.timezone.ivy.instance" value="America/Denver" />
     <property name="java.vm.version" value="25.101-b13" />
-    <property name="java.class.path" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/test/java:/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/main/java:/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/lib/junit-4.9.jar:/Users/whediger/java/apache-ant-1.10.0/lib/junit-4.9.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-launcher.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-junit.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-junit4.jar" />
     <property name="ivy.default.ivy.user.dir" value="/Users/whediger/.ivy2" />
+    <property name="java.class.path" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/test/java:/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/bin/main/java:/Users/whediger/Documents/java/JUnit/junit-example/junit/controller/lib/junit-4.9.jar:/Users/whediger/java/apache-ant-1.10.0/lib/junit-4.9.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-launcher.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-junit.jar:/Users/whediger/java/apache-ant-1.10.0/lib/ant-junit4.jar" />
     <property name="user.home.ivy.instance" value="/Users/whediger" />
     <property name="basedir.ivy.instance" value="/Users/whediger/Documents/java/JUnit/junit-example/junit/controller" />
     <property name="ant.library.dir" value="/Users/whediger/java/apache-ant-1.10.0/lib" />
@@ -191,15 +194,15 @@
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="java.awt.printerjob.ivy.instance" value="sun.lwawt.macosx.CPrinterJob" />
     <property name="ivy.settings.dir.ivy.instance" value="jar:file:/Users/whediger/java/apache-ant-1.10.0/lib/ivy-2.4.0.jar!/org/apache/ivy/core/settings" />
-    <property name="ivy.resolver.default.check.modified.ivy.instance" value="false" />
     <property name="ant.core.lib" value="/Users/whediger/java/apache-ant-1.10.0/lib/ant.jar" />
+    <property name="ivy.resolver.default.check.modified.ivy.instance" value="false" />
     <property name="java.vm.specification.vendor" value="Oracle Corporation" />
     <property name="ivy.settings.dir" value="jar:file:/Users/whediger/java/apache-ant-1.10.0/lib/ivy-2.4.0.jar!/org/apache/ivy/core/settings" />
     <property name="gopherProxySet.ivy.instance" value="false" />
     <property name="file.separator" value="/" />
     <property name="user.language.ivy.instance" value="en" />
-    <property name="user.country.ivy.instance" value="US" />
     <property name="ivy.shared.default.artifact.pattern.ivy.instance" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
+    <property name="user.country.ivy.instance" value="US" />
     <property name="ivy.conf.url.ivy.instance" value="jar:file:/Users/whediger/java/apache-ant-1.10.0/lib/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml" />
     <property name="java.runtime.version" value="1.8.0_101-b13" />
     <property name="java.specification.name.ivy.instance" value="Java Platform API Specification" />
@@ -218,7 +221,7 @@
     <property name="sun.arch.data.model" value="64" />
     <property name="ivy.buildlist.ivyfilepath" value="ivy.xml" />
   </properties>
-  <testcase classname="controller.TestDefaultController" name="testAddHandler" time="0.004" />
+  <testcase classname="controller.TestDefaultController" name="testAddHandler" time="0.002" />
   <testcase classname="controller.TestDefaultController" name="testProcessRequest" time="0.001" />
   <testcase classname="controller.TestDefaultController" name="testProcessRequestAnswersErrorResponse" time="0.001" />
   <testcase classname="controller.TestDefaultController" name="testGetHandlerNotDefined" time="0.0" />
