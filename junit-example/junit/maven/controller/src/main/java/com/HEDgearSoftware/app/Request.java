@@ -1,5 +1,5 @@
 
-package org.junit;
+
 
 public interface Request
 {

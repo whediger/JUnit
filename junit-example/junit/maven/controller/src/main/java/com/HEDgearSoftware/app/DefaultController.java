@@ -1,5 +1,5 @@
 
-package org.junit;
+
 
 import java.util.HashMap;
 import java.util.Map;

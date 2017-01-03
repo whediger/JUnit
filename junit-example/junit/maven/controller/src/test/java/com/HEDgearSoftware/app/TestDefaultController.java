@@ -1,5 +1,5 @@
 
-package org.junit;
+
 
 
 import org.junit.Test;

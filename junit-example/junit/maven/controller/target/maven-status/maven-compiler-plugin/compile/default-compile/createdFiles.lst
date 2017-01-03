@@ -1,6 +1,6 @@
-org/junit/ErrorResponse.class
-org/junit/Controller.class
-org/junit/RequestHandler.class
-org/junit/Request.class
-org/junit/Response.class
-org/junit/DefaultController.class
+Request.class
+Controller.class
+Response.class
+DefaultController.class
+ErrorResponse.class
+RequestHandler.class
