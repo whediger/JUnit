@@ -16,4 +16,23 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <developers>
+    <developer>
+      <name>Wes Hediger</name>
+      <id>HED2084</id>
+      <organization>HEDgear SoftWare</organization>
+      <roles>
+        <role>Software Engineer</role>
+        <role>CEO, CFO, CTO... MadHatter</role>
+      </roles>
+    </developer>
+  </developers>
+  <description>
+    "This is a project I built to practice building projects in Maven"
+  </description>
+  <organization>
+    <name>HEDgear SoftWhere</name>
+    <url>https://findwes-393ac.firebaseapp.com/1</url>
+  </organization>
+  <inceptionYear>1984</inceptionYear>
 </project>
