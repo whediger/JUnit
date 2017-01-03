@@ -36,3 +36,15 @@
   </organization>
   <inceptionYear>1984</inceptionYear>
 </project>
+
+<build>
+  <plugins>
+    <!-- use this plugin to custom configure the compiler plug-in -->
+    <artifactId>maven-compiler-plugin</artifactId>
+    <configuration>
+      <!-- get list of configuration settings from maven website -->
+      <source>1.4</source>
+      <target>1.4</target>
+    </configuration>
+  </plugins>
+</build>
